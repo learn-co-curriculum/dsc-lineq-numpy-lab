@@ -29,33 +29,12 @@ How much does each bag cost?
 ```python
 # Solution:
 
-# Create Equations:
-
-# Let x be the price of a bag of coffee and y be the price of a bag of tea. 
-
-# 29x + 41y = 490
-
-# 23x + 41y = 448
-
-#  Create numpy matrices from above equations
-import numpy as np
-A = np.matrix([[29,41], [23,41]])
-B = np.matrix([[490,448]])
-
-# Calculate inverse of A and take the dot product
-A_inv = np.linalg.inv(A)
-X = A_inv.dot(B.T)
-print (X)
-
-# Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
-
 ```
 
 
 ```python
 # Explain your answer in terms of prices
-# bag of coffee = $7 , bag of tea = $7
+
 ```
 
 ## Exercise 2:
@@ -70,29 +49,13 @@ How much was the admission for each child and adult?
 ```python
 # Create a system of equations
 
-# Let x be the price per child and y be the price per adult
 
-# 12x + 3y = 162 
-# 
-# 8x + 3y = 122 
-
-# Create matrices in numpy 
-A = np.matrix([[12,3],[8,3]])
-B = np.matrix([162,122])
-
-# Calculate inverse of A and take the dot product
-A_inv = np.linalg.inv(A)
-X = A_inv.dot(B.T)
-print (X)
-
-# Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
 ```
 
 
 ```python
 # Describe your result
-# price per child = $10, price per adult = $14
+
 ```
 
 ## Exercise 3:
@@ -111,45 +74,13 @@ How many bananas, oranges and papayas would you need to make this punch ?
 ```python
 # Create a system of equations
 
-# Let b represent bananas, o - oranges and p - papayas. 
 
-# b + o + p = 7
-
-# .5b + .75o + 1.25p = 5.25
-
-# -2b + o + p = 0
-
-# Create matrices in numpy 
-A = np.matrix([[1,1,1],[0.5, 0.75, 1.25], [-2,1,0]])
-B = np.matrix([[7, 5.25, 0]])
-
-# Calculate inverse of A and take the dot product
-A_inv = np.linalg.inv(A)
-X = A_inv.dot(B.T)
-print (X)
-
-# Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
 ```
-
-    [[2.]
-     [4.]
-     [1.]]
-
-
-
-
-
-    matrix([[2.],
-            [4.],
-            [1.]])
-
-
 
 
 ```python
 # Explain your answer
-# bananas = 2, oranges = 4, papapayas = 1 , needed to make the punch
+
 ```
 
 ## Exercise 4
@@ -168,45 +99,12 @@ How much is the individual rent for three houses?
 ```python
 # Create a system of equations
 
-# Let x,y,z represent rent value for house 1,2 and 3 respectively
-
-# x + y + z = 1240
-
-# .1x + .2y + .3z = 278
-
-# 2x +0y -z = 0
-
-# Create matrices in numpy 
-A = np.matrix([[1,1,1],[0.1, 0.2, 0.3], [2,0,-1]])
-B = np.matrix([[1240, 278, 0]])
-
-# Calculate inverse of A and take the dot product
-A_inv = np.linalg.inv(A)
-X = A_inv.dot(B.T)
-print (X)
-
-# Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
 ```
-
-    [[300.]
-     [340.]
-     [600.]]
-
-
-
-
-
-    matrix([[300.],
-            [340.],
-            [600.]])
-
-
 
 
 ```python
 # Explain your answer
-# Rent: house1 = 300, house2 = 340, house3 = 600
+
 ```
 
 ## Summary
