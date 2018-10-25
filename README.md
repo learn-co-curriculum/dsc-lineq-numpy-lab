@@ -1,1 +1,1 @@
-# dsc-2-13-13-linalg-lineq-numpy-lab
+# ds-ling_alg-numpy-solutions-lab
