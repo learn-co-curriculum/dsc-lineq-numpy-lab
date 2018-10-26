@@ -1,5 +1,5 @@
 
-# Solving systems of linear equations with `numpy` - Lab
+# Solving Systems of Linear Equations with NumPy - Lab
 
 ## Introduction 
 
@@ -11,8 +11,8 @@ Following exercises present some problems that can be converted into a system of
 You will be able to:
 
 * Build a system of equations from given problem by creating matrix and vectors in NumPy
-* Calculate the inverse and dot-product to get the values for unknown variables.
-* Solve linear equations using `numpy.linalg.solve()`. 
+* Calculate the inverse and dot-product to get the values for unknown variables
+* Solve linear equations using `numpy.linalg.solve()`
 
 
 ## Exercise 1
