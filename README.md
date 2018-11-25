@@ -52,6 +52,18 @@ np.linalg.solve(A,B.T)
 
 ```
 
+    [[7.]
+     [7.]]
+
+
+
+
+
+    matrix([[7.],
+            [7.]])
+
+
+
 
 ```python
 # Explain your answer in terms of prices
@@ -88,6 +100,18 @@ print (X)
 # Verify the answer linalg.solve()
 np.linalg.solve(A,B.T)
 ```
+
+    [[10.]
+     [14.]]
+
+
+
+
+
+    matrix([[10.],
+            [14.]])
+
+
 
 
 ```python
@@ -172,13 +196,13 @@ How much is the individual rent for three houses?
 
 # x + y + z = 1240
 
-# .1x + .2y + .3z = 278
+# .1x + .2y + .3z = 276
 
 # 2x +0y -z = 0
 
 # Create matrices in numpy 
 A = np.matrix([[1,1,1],[0.1, 0.2, 0.3], [2,0,-1]])
-B = np.matrix([[1240, 278, 0]])
+B = np.matrix([[1240, 276, 0]])
 
 # Calculate inverse of A and take the dot product
 A_inv = np.linalg.inv(A)
@@ -189,24 +213,24 @@ print (X)
 np.linalg.solve(A,B.T)
 ```
 
-    [[300.]
-     [340.]
-     [600.]]
+    [[280.]
+     [400.]
+     [560.]]
 
 
 
 
 
-    matrix([[300.],
-            [340.],
-            [600.]])
+    matrix([[280.],
+            [400.],
+            [560.]])
 
 
 
 
 ```python
 # Explain your answer
-# Rent: house1 = 300, house2 = 340, house3 = 600
+# Rent: house1 = 280, house2 = 400, house3 = 560
 ```
 
 ## Summary
