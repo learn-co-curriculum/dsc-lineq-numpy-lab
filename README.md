@@ -141,7 +141,7 @@ How many bananas, oranges and papayas would you need to make this punch ?
 
 # .5b + .75o + 1.25p = 5.25
 
-# -2b + o + p = 0
+# -2b + o + 0p = 0
 
 # Create matrices in numpy 
 A = np.matrix([[1,1,1],[0.5, 0.75, 1.25], [-2,1,0]])
