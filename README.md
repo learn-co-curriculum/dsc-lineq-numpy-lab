@@ -3,23 +3,22 @@
 
 ## Introduction 
 
-Now we have gathered all the required skills needed to solve systems of linear equations. We saw why need to calculate inverses of matrices, followed by matrix multiplication to figure the values of unknown variables. 
+Now you've gathered all the required skills needed to solve systems of linear equations. You saw why there was need to calculate inverses of matrices, followed by matrix multiplication to figure out the values of unknown variables. 
 
-Following exercises present some problems that can be converted into a system of linear equations. Solve the problems for the values of unknown variables. 
+The exercises in this lab present some problems that can be converted into a system of linear equations. 
 
 ## Objectives
 You will be able to:
 
 * Build a system of equations from given problem by creating matrix and vectors in NumPy
-* Calculate the inverse and dot-product to get the values for unknown variables
+* Calculate the inverse and dot-product to get the values for unknown variables.
 * Solve linear equations using `numpy.linalg.solve()`
-
 
 ## Exercise 1
 
 A coffee shop is having a sale on coffee and tea. 
 
-On day 1, 29 bags of coffee and 41 bags of tea was sold, giving a total of 490 dollars.
+On day 1, 29 bags of coffee and 41 bags of tea were sold, for a total of 490 dollars.
 
 On day 2, they sold 23 bags of coffee and 41 bags of tea, for which customers paid a total of 448 dollars.  
 
@@ -70,7 +69,7 @@ np.linalg.solve(A,B.T)
 # bag of coffee = $7 , bag of tea = $7
 ```
 
-## Exercise 2:
+## Exercise 2
 
 The cost of admission to a popular music concert was 162 dollars for 12 children and 3 adults. 
 
@@ -119,29 +118,26 @@ np.linalg.solve(A,B.T)
 # price per child = $10, price per adult = $14
 ```
 
-## Exercise 3:
+## Exercise 3
 
-You want to make a certain kind of tropical punch, using bananas, oranges, and papayas. 
+You want to make a soup containing tomatoes, carrots and onions.
 
-Suppose you don't know how many of each to put in the punch, but you know that there are seven pieces of fruit in the mix, and there are twice as many oranges as bananas. 
+Suppose you don't know the exact mix to put in, but you know there are 7 individual pieces of vegetables, and there are twice as many tomatoes as onions, and that the 7 pieces of vegetables cost 5.25 USD in total. 
+You also know that onions cost 0.5 USD each, tomatoes cost .75 USD and carrots cost 1.25 USD each.
 
-You also know that the seven pieces of fruit cost \$5.25, 
-
-where bananas cost \$.50 each, oranges cost \$.75 each, and papayas cost \$1.25 each.
-
-How many bananas, oranges and papayas would you need to make this punch ?
+Create a system of equations to find out exactly how many of each of the vegetables is in your soup.
 
 
 ```python
 # Create a system of equations
 
-# Let b represent bananas, o - oranges and p - papayas. 
+# Let o represent onions, t - tomatoes and c - carrots.  p--> c .   b--> o, 0---> t
 
-# b + o + p = 7
+# t + c + o = 7
 
-# .5b + .75o + 1.25p = 5.25
+# .5o + .75t + 1.25c = 5.25
 
-# -2b + o + p = 0
+#  t  = 2o which is equal to: -2o + t + 0c = 0
 
 # Create matrices in numpy 
 A = np.matrix([[1,1,1],[0.5, 0.75, 1.25], [-2,1,0]])
@@ -173,16 +169,16 @@ np.linalg.solve(A,B.T)
 
 ```python
 # Explain your answer
-# bananas = 2, oranges = 4, papapayas = 1 , needed to make the punch
+# onions = 2, tomatoes = 4, carrots = 1 , needed to make the soup
 ```
 
 ## Exercise 4
 
-A landlord owns 3 houses, a 1-bedroom, a 2-bedroom , and a 3-bedroom house. 
+A landlord owns 3 properties: a 1-bedroom, a 2-bedroom , and a 3-bedroom house. 
 
-The total rent he receives is 1240 dollars. 
+The total rent he receives is 1240 USD. 
 
-He needs to make some repairs, where it costs 10% of the 1-bedroom house’s rent for its repairs, 20% of the 2-bedroom for its repairs, and 30% of the 3-bedroom house's rent for its repairs.  The total repair bill for all three houses was $276. 
+He needs to make some repairs, where those repairs cost 10% of the 1-bedroom house’s rent. The 2-bedroom repairs cost 20% of the 2-bedroom rental price, and 30% of the 3-bedroom house's rent for its repairs.  The total repair bill for all three houses was 276 USD. 
 
 The 3-bedroom house's rent is twice the 1-bedroom house’s rent. 
 
@@ -234,4 +230,4 @@ np.linalg.solve(A,B.T)
 ```
 
 ## Summary
-In this lab, we saw how to use Numpy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `.solve()`. We shall now take these skills forward and see how we can define a simple regression problem using linear algebra and solve it with numpy, only using the skills that we have learnt so far. 
+In this lab, you learned how to use Numpy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `.solve()`. You'll now take these skills forward and see how you can define a simple regression problem using linear algebra and solve it with Numpy. 
