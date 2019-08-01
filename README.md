@@ -36,6 +36,53 @@ How much does each bag cost?
 
 ```
 
+
+```python
+# __SOLUTION__ 
+# Solution:
+
+# Create Equations:
+
+# Let x be the price of a bag of coffee and y be the price of a bag of tea. 
+
+# 29x + 41y = 490
+
+# 23x + 41y = 448
+
+#  Create numpy matrices from above equations
+import numpy as np
+A = np.matrix([[29,41], [23,41]])
+B = np.matrix([[490,448]])
+
+# Calculate inverse of A and take the dot product
+A_inv = np.linalg.inv(A)
+X = A_inv.dot(B.T)
+print (X)
+
+# Verify the answer linalg.solve()
+np.linalg.solve(A,B.T)
+
+```
+
+    [[7.]
+     [7.]]
+
+
+
+
+
+    matrix([[7.],
+            [7.]])
+
+
+
+
+```python
+# __SOLUTION__ 
+# Explain your answer in terms of prices
+# bag of coffee = $7 , bag of tea = $7
+```
+
 ## Exercise 2
 
 The cost of admission to a popular music concert was 162 dollars for 12 children and 3 adults. 
@@ -55,6 +102,49 @@ How much was the admission for each child and adult?
 ```python
 # Describe your result
 
+```
+
+
+```python
+# __SOLUTION__ 
+# Create a system of equations
+
+# Let x be the price per child and y be the price per adult
+
+# 12x + 3y = 162 
+# 
+# 8x + 3y = 122 
+
+# Create matrices in numpy 
+A = np.matrix([[12,3],[8,3]])
+B = np.matrix([162,122])
+
+# Calculate inverse of A and take the dot product
+A_inv = np.linalg.inv(A)
+X = A_inv.dot(B.T)
+print (X)
+
+# Verify the answer linalg.solve()
+np.linalg.solve(A,B.T)
+```
+
+    [[10.]
+     [14.]]
+
+
+
+
+
+    matrix([[10.],
+            [14.]])
+
+
+
+
+```python
+# __SOLUTION__ 
+# Describe your result
+# price per child = $10, price per adult = $14
 ```
 
 ## Exercise 3
@@ -79,6 +169,53 @@ Create a system of equations to find out exactly how many of each of the vegetab
 
 ```
 
+
+```python
+# __SOLUTION__ 
+# Create a system of equations
+
+# Let o represent onions, t - tomatoes and c - carrots.  p--> c .   b--> o, 0---> t
+
+# t + c + o = 7
+
+# .5o + .75t + 1.25c = 5.25
+
+#  t  = 2o which is equal to: -2o + t + 0c = 0
+
+# Create matrices in numpy 
+A = np.matrix([[1,1,1],[0.5, 0.75, 1.25], [-2,1,0]])
+B = np.matrix([[7, 5.25, 0]])
+
+# Calculate inverse of A and take the dot product
+A_inv = np.linalg.inv(A)
+X = A_inv.dot(B.T)
+print (X)
+
+# Verify the answer linalg.solve()
+np.linalg.solve(A,B.T)
+```
+
+    [[2.]
+     [4.]
+     [1.]]
+
+
+
+
+
+    matrix([[2.],
+            [4.],
+            [1.]])
+
+
+
+
+```python
+# __SOLUTION__ 
+# Explain your answer
+# onions = 2, tomatoes = 4, carrots = 1 , needed to make the soup
+```
+
 ## Exercise 4
 
 A landlord owns 3 properties: a 1-bedroom, a 2-bedroom , and a 3-bedroom house. 
@@ -101,6 +238,53 @@ How much is the individual rent for three houses?
 ```python
 # Explain your answer
 
+```
+
+
+```python
+# __SOLUTION__ 
+# Create a system of equations
+
+# Let x,y,z represent rent value for house 1,2 and 3 respectively
+
+# x + y + z = 1240
+
+# .1x + .2y + .3z = 276
+
+# 2x +0y -z = 0
+
+# Create matrices in numpy 
+A = np.matrix([[1,1,1],[0.1, 0.2, 0.3], [2,0,-1]])
+B = np.matrix([[1240, 276, 0]])
+
+# Calculate inverse of A and take the dot product
+A_inv = np.linalg.inv(A)
+X = A_inv.dot(B.T)
+print (X)
+
+# Verify the answer linalg.solve()
+np.linalg.solve(A,B.T)
+```
+
+    [[280.]
+     [400.]
+     [560.]]
+
+
+
+
+
+    matrix([[280.],
+            [400.],
+            [560.]])
+
+
+
+
+```python
+# __SOLUTION__ 
+# Explain your answer
+# Rent: house1 = 280, house2 = 400, house3 = 560
 ```
 
 ## Summary
