@@ -3,14 +3,14 @@
 
 ## Introduction 
 
-Now you've gathered all the required skills needed to solve systems of linear equations. You saw why there was need to calculate inverses of matrices, followed by matrix multiplication to figure out the values of unknown variables. 
+Now you've gathered all the required skills needed to solve systems of linear equations. You saw why there was a need to calculate inverses of matrices, followed by matrix multiplication to figure out the values of unknown variables. 
 
 The exercises in this lab present some problems that can be converted into a system of linear equations. 
 
 ## Objectives
 You will be able to:
 
-* Build a system of equations from given problem by creating matrix and vectors in NumPy
+* Build a system of equations from a given problem by creating matrix and vectors in NumPy
 * Calculate the inverse and dot-product to get the values for unknown variables.
 * Solve linear equations using `numpy.linalg.solve()`
 
@@ -149,12 +149,12 @@ np.linalg.solve(A,B.T)
 
 ## Exercise 3
 
-You want to make a soup containing tomatoes, carrots and onions.
+You want to make a soup containing tomatoes, carrots, and onions.
 
 Suppose you don't know the exact mix to put in, but you know there are 7 individual pieces of vegetables, and there are twice as many tomatoes as onions, and that the 7 pieces of vegetables cost 5.25 USD in total. 
 You also know that onions cost 0.5 USD each, tomatoes cost .75 USD and carrots cost 1.25 USD each.
 
-Create a system of equations to find out exactly how many of each of the vegetables is in your soup.
+Create a system of equations to find out exactly how many of each of the vegetables are in your soup.
 
 
 ```python
@@ -218,11 +218,11 @@ np.linalg.solve(A,B.T)
 
 ## Exercise 4
 
-A landlord owns 3 properties: a 1-bedroom, a 2-bedroom , and a 3-bedroom house. 
+A landlord owns 3 properties: a 1-bedroom, a 2-bedroom, and a 3-bedroom house. 
 
 The total rent he receives is 1240 USD. 
 
-He needs to make some repairs, where those repairs cost 10% of the 1-bedroom house’s rent. The 2-bedroom repairs cost 20% of the 2-bedroom rental price, and 30% of the 3-bedroom house's rent for its repairs.  The total repair bill for all three houses was 276 USD. 
+He needs to make some repairs, where those repairs cost 10% of the 1-bedroom house’s rent. The 2-bedroom repairs cost 20% of the 2-bedroom rental price and 30% of the 3-bedroom house's rent for its repairs.  The total repair bill for all three houses was 276 USD. 
 
 The 3-bedroom house's rent is twice the 1-bedroom house’s rent. 
 
