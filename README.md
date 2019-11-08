@@ -10,9 +10,8 @@ The exercises in this lab present some problems that can be converted into a sys
 ## Objectives
 You will be able to:
 
-* Build a system of equations from a given problem by creating matrix and vectors in NumPy
-* Calculate the inverse and dot-product to get the values for unknown variables.
-* Solve linear equations using `numpy.linalg.solve()`
+- Use matrix algebra and NumPy to solve a system of linear equations given a real-life example 
+- Use NumPy's linear algebra solver to solve for systems of linear equations
 
 ## Exercise 1
 
@@ -26,9 +25,7 @@ How much does each bag cost?
 
 
 ```python
-# Solution:
-
-# Create Equations:
+# Create and solve the relevant system of equations
 
 # Let x be the price of a bag of coffee and y be the price of a bag of tea. 
 
@@ -38,17 +35,16 @@ How much does each bag cost?
 
 #  Create numpy matrices from above equations
 import numpy as np
-A = np.matrix([[29,41], [23,41]])
-B = np.matrix([[490,448]])
+A = np.matrix([[29, 41], [23, 41]])
+B = np.matrix([[490, 448]])
 
 # Calculate inverse of A and take the dot product
 A_inv = np.linalg.inv(A)
 X = A_inv.dot(B.T)
-print (X)
+print(X)
 
 # Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
-
+np.linalg.solve(A, B.T)
 ```
 
     [[7.]
@@ -65,7 +61,7 @@ np.linalg.solve(A,B.T)
 
 
 ```python
-# Explain your answer in terms of prices
+# Describe your result
 # bag of coffee = $7 , bag of tea = $7
 ```
 
@@ -73,13 +69,13 @@ np.linalg.solve(A,B.T)
 
 The cost of admission to a popular music concert was 162 dollars for 12 children and 3 adults. 
 
-The admission was 122 dollars for 8 children and 3 adults in another music concert. 
+The admission was 122 dollars for 8 children and 3 adults in the same music concert. 
 
 How much was the admission for each child and adult?
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 # Let x be the price per child and y be the price per adult
 
@@ -88,8 +84,8 @@ How much was the admission for each child and adult?
 # 8x + 3y = 122 
 
 # Create matrices in numpy 
-A = np.matrix([[12,3],[8,3]])
-B = np.matrix([162,122])
+A = np.matrix([[12, 3],[8, 3]])
+B = np.matrix([162, 122])
 
 # Calculate inverse of A and take the dot product
 A_inv = np.linalg.inv(A)
@@ -97,7 +93,7 @@ X = A_inv.dot(B.T)
 print (X)
 
 # Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
+np.linalg.solve(A, B.T)
 ```
 
     [[10.]
@@ -123,13 +119,13 @@ np.linalg.solve(A,B.T)
 You want to make a soup containing tomatoes, carrots, and onions.
 
 Suppose you don't know the exact mix to put in, but you know there are 7 individual pieces of vegetables, and there are twice as many tomatoes as onions, and that the 7 pieces of vegetables cost 5.25 USD in total. 
-You also know that onions cost 0.5 USD each, tomatoes cost .75 USD and carrots cost 1.25 USD each.
+You also know that onions cost 0.5 USD each, tomatoes cost 0.75 USD and carrots cost 1.25 USD each.
 
 Create a system of equations to find out exactly how many of each of the vegetables are in your soup.
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 # Let o represent onions, t - tomatoes and c - carrots.  p--> c .   b--> o, 0---> t
 
@@ -168,7 +164,7 @@ np.linalg.solve(A,B.T)
 
 
 ```python
-# Explain your answer
+# Describe your result
 # onions = 2, tomatoes = 4, carrots = 1 , needed to make the soup
 ```
 
@@ -186,7 +182,7 @@ How much is the individual rent for three houses?
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 # Let x,y,z represent rent value for house 1,2 and 3 respectively
 
@@ -197,7 +193,7 @@ How much is the individual rent for three houses?
 # 2x +0y -z = 0
 
 # Create matrices in numpy 
-A = np.matrix([[1,1,1],[0.1, 0.2, 0.3], [2,0,-1]])
+A = np.matrix([[1, 1, 1],[0.1, 0.2, 0.3], [2, 0, -1]])
 B = np.matrix([[1240, 276, 0]])
 
 # Calculate inverse of A and take the dot product
@@ -206,7 +202,7 @@ X = A_inv.dot(B.T)
 print (X)
 
 # Verify the answer linalg.solve()
-np.linalg.solve(A,B.T)
+np.linalg.solve(A, B.T)
 ```
 
     [[280.]
@@ -225,9 +221,9 @@ np.linalg.solve(A,B.T)
 
 
 ```python
-# Explain your answer
+# Describe your result
 # Rent: house1 = 280, house2 = 400, house3 = 560
 ```
 
 ## Summary
-In this lab, you learned how to use Numpy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `.solve()`. You'll now take these skills forward and see how you can define a simple regression problem using linear algebra and solve it with Numpy. 
+In this lab, you learned how to use NumPy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `solve()` function. You'll now take these skills forward and see how you can define a simple regression problem using linear algebra and solve it with Numpy. 
