@@ -10,9 +10,8 @@ The exercises in this lab present some problems that can be converted into a sys
 ## Objectives
 You will be able to:
 
-* Build a system of equations from a given problem by creating matrix and vectors in NumPy
-* Calculate the inverse and dot-product to get the values for unknown variables.
-* Solve linear equations using `numpy.linalg.solve()`
+- Use matrix algebra and NumPy to solve a system of linear equations given a real-life example 
+- Use NumPy's linear algebra solver to solve for systems of linear equations
 
 ## Exercise 1
 
@@ -26,13 +25,13 @@ How much does each bag cost?
 
 
 ```python
-# Solution:
+# Create and solve the relevant system of equations
 
 ```
 
 
 ```python
-# Explain your answer in terms of prices
+# Describe your result
 
 ```
 
@@ -40,13 +39,13 @@ How much does each bag cost?
 
 The cost of admission to a popular music concert was 162 dollars for 12 children and 3 adults. 
 
-The admission was 122 dollars for 8 children and 3 adults in another music concert. 
+The admission was 122 dollars for 8 children and 3 adults in the same music concert. 
 
 How much was the admission for each child and adult?
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 
 ```
@@ -62,20 +61,20 @@ How much was the admission for each child and adult?
 You want to make a soup containing tomatoes, carrots, and onions.
 
 Suppose you don't know the exact mix to put in, but you know there are 7 individual pieces of vegetables, and there are twice as many tomatoes as onions, and that the 7 pieces of vegetables cost 5.25 USD in total. 
-You also know that onions cost 0.5 USD each, tomatoes cost .75 USD and carrots cost 1.25 USD each.
+You also know that onions cost 0.5 USD each, tomatoes cost 0.75 USD and carrots cost 1.25 USD each.
 
 Create a system of equations to find out exactly how many of each of the vegetables are in your soup.
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 
 ```
 
 
 ```python
-# Explain your answer
+# Describe your result
 
 ```
 
@@ -93,15 +92,15 @@ How much is the individual rent for three houses?
 
 
 ```python
-# Create a system of equations
+# Create and solve the relevant system of equations
 
 ```
 
 
 ```python
-# Explain your answer
+# Describe your result
 
 ```
 
 ## Summary
-In this lab, you learned how to use Numpy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `.solve()`. You'll now take these skills forward and see how you can define a simple regression problem using linear algebra and solve it with Numpy. 
+In this lab, you learned how to use NumPy to solve linear equations by taking inverses and matrix multiplication and also using numpy's `solve()` function. You'll now take these skills forward and see how you can define a simple regression problem using linear algebra and solve it with Numpy. 
